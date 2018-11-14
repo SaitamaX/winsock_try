@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  Winsock_tcp_client.cpp
+c:\users\jlurobot\documents\visual studio 2015\projects\winsock_tcp_client\winsock_tcp_client\winsock_tcp_client.cpp(196): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\jlurobot\documents\visual studio 2015\projects\winsock_tcp_client\winsock_tcp_client\winsock_tcp_client.cpp(139): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1850): note: 参见“inet_addr”的声明
+  Winsock_tcp_client.vcxproj -> C:\Users\jlurobot\Documents\Visual Studio 2015\Projects\Winsock_tcp_client\x64\Debug\Winsock_tcp_client.exe
+  Winsock_tcp_client.vcxproj -> C:\Users\jlurobot\Documents\Visual Studio 2015\Projects\Winsock_tcp_client\x64\Debug\Winsock_tcp_client.pdb (Full PDB)
