@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  Winsock_tcp_client.cpp
+Winsock_tcp_client.cpp(195): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+Winsock_tcp_client.cpp(138): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\8.1\Include\um\WinSock2.h(1850): note: 参见“inet_addr”的声明
+  正在生成代码
+  All 32 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  Winsock_tcp_client.vcxproj -> C:\Users\jlurobot\Documents\Visual Studio 2015\Projects\Winsock_tcp_client\x64\Release\Winsock_tcp_client.exe
+  Winsock_tcp_client.vcxproj -> C:\Users\jlurobot\Documents\Visual Studio 2015\Projects\Winsock_tcp_client\x64\Release\Winsock_tcp_client.pdb (Full PDB)

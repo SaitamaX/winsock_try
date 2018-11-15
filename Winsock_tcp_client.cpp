@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include <iostream>
-//#include <Ws2tcpip.h>
 #include <WinSock2.h>
 #pragma comment(lib,"ws2_32.lib")
 using namespace std;
