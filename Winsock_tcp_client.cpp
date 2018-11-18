@@ -4,12 +4,16 @@
 #include "stdafx.h"
 #include <iostream>
 #include <WinSock2.h>
+#include <vector>
+
 #pragma comment(lib,"ws2_32.lib")
 using namespace std;
 
 //接收服务器发来的数据的进程
 void recvProc(SOCKET socketSer)
 {
+	vector<int> s;
+
 	char msgRcv[100] = { 0 };
 	while (true)
 	{
@@ -44,6 +48,7 @@ void recvProc(SOCKET socketSer)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	bool flag_first = true;//刚连接时先选择聊天室
 	WSADATA wsaData;
 	/*
 	调用WSAStartup函数的目的：对Winsock DLL进行初始化（Winsock的服务是以动态链接库Winsock DLL的形式实现的），
@@ -172,9 +177,22 @@ int _tmain(int argc, _TCHAR* argv[])
 	CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)recvProc, (void*)socketCli, 0, NULL);//创建接收进程
 	while (true)
 	{
-		ZeroMemory(sendBuf, 100);//清空发送缓冲区
-		cin >> sendBuf;//从控制台输入要发送的数据
-
+		if (flag_first)
+		{
+			Sleep(10);
+			cout << "请输入你要进入的聊天室(1或2):" << endl;
+			cin >> sendBuf;
+			if (atoi(sendBuf) != 1 && atoi(sendBuf) != 2) {
+				cout << "你输入的信息有误,请重新输入" << endl;
+				continue;
+			}
+			flag_first = false;
+			cout << "已进入聊天室" << sendBuf << endl;
+		}
+		else {
+			ZeroMemory(sendBuf, 100);//清空发送缓冲区
+			cin >> sendBuf;//从控制台输入要发送的数据
+		}
 					   /*
 					   调用send函数的目的：发送数据
 
